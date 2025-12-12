@@ -1,7 +1,7 @@
 -- ==========================================================
 -- CRIAÇÃO DO SCHEMA
 -- ==========================================================
-CREATE SCHEMA IF NOT EXISTS academico;
+-- CREATE SCHEMA IF NOT EXISTS academico;
 
 -- ==========================================================
 -- TABELA PESQUISADOR
