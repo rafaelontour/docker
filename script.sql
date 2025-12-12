@@ -6,7 +6,7 @@
 -- ==========================================================
 -- TABELA PESQUISADOR
 -- ==========================================================
-CREATE TABLE IF NOT EXISTS academico.pesquisador (
+CREATE TABLE IF NOT EXISTS pesquisador (
     id SERIAL PRIMARY KEY,
     nome VARCHAR(255) NOT NULL
 );
@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS academico.pesquisador (
 -- ==========================================================
 -- TABELA ARTIGO
 -- ==========================================================
-CREATE TABLE IF NOT EXISTS academico.artigo (
+CREATE TABLE IF NOT EXISTS artigo (
     id SERIAL PRIMARY KEY,
     titulo VARCHAR(255) NOT NULL,
     resumo TEXT NOT NULL,
@@ -22,14 +22,14 @@ CREATE TABLE IF NOT EXISTS academico.artigo (
     pesquisador_id INTEGER NOT NULL,
     CONSTRAINT fk_artigo_pesquisador
         FOREIGN KEY (pesquisador_id)
-        REFERENCES academico.pesquisador(id)
+        REFERENCES pesquisador(id)
         ON DELETE CASCADE
 );
 
 -- ==========================================================
 -- INSERTS DE PESQUISADORES
 -- ==========================================================
-INSERT INTO academico.pesquisador (nome) VALUES
+INSERT INTO pesquisador (nome) VALUES
     ('Ana Beatriz Costa'),
     ('Rafael Monteiro'),
     ('Camila Andrade'),
@@ -39,7 +39,7 @@ INSERT INTO academico.pesquisador (nome) VALUES
 -- ==========================================================
 -- INSERTS DE ARTIGOS
 -- ==========================================================
-INSERT INTO academico.artigo (titulo, resumo, conteudo, pesquisador_id) VALUES
+INSERT INTO artigo (titulo, resumo, conteudo, pesquisador_id) VALUES
     (
         'Aplicações de IA na Saúde',
         'Um estudo sobre como algoritmos de inteligência artificial estão transformando diagnósticos clínicos.',
