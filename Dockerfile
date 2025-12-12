@@ -1,5 +1,5 @@
 # 1. Usar imagem oficial atualizada do PostgreSQL
-FROM postgres:latest
+FROM postgres:15
 
 # 2. Variáveis de ambiente do Postgres
 ENV POSTGRES_USER=postgres
